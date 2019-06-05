@@ -178,11 +178,22 @@ a {
   margin: 0 auto;
   color: #2C2C2C;
 }
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    width: 100%;
+  }
+}
 .container .navigation {
   display: flex;
   width: 100%;
   justify-content: flex-end;
   margin: 2.5rem 0;
+}
+@media (max-width: 500px) {
+  .container .navigation {
+    justify-content: center;
+  }
 }
 .container .navigation .nav-items {
   display: flex;
@@ -198,6 +209,15 @@ a {
   padding: 4.5rem 2.5rem;
   border-radius: 1.2rem;
 }
+@media (max-width: 500px) {
+  .container .top-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: none;
+    padding: 2rem;
+  }
+}
 .container .top-content .pic-title {
   display: inline-block;
   width: 100%;
@@ -208,6 +228,12 @@ a {
   width: 40rem;
   border-radius: 1.2rem;
   margin-bottom: 2rem;
+}
+@media (max-width: 500px) {
+  .container .top-content .pic-title .top-image {
+    width: 25rem;
+    text-align: center;
+  }
 }
 .container .top-content .pic-title h1 {
   padding-bottom: 1.5rem;
@@ -229,18 +255,34 @@ a {
 }
 .container .middle-content {
   display: flex;
-  margin: 2.5rem 0;
+  margin: 0;
   padding: 2.5rem 0;
   line-height: 1.8rem;
 }
+@media (max-width: 500px) {
+  .container .middle-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .container .middle-content section {
   width: 50%;
+}
+@media (max-width: 500px) {
+  .container .middle-content section {
+    width: 80%;
+  }
 }
 .container .middle-content h3 {
   padding-bottom: 1.8rem;
 }
 .container .middle-content .summary {
   padding-right: 3rem;
+}
+@media (max-width: 500px) {
+  .container .middle-content .summary {
+    padding: 0 0 2rem 0;
+  }
 }
 .container .middle-content .skill-items {
   border: 0.5px solid #BEBEBE;
@@ -252,6 +294,11 @@ a {
 }
 .container .work-history h3 {
   padding-bottom: 1.2rem;
+}
+@media (max-width: 500px) {
+  .container .work-history h3 {
+    padding: 0 2rem;
+  }
 }
 .container .work-history table {
   width: 100%;
