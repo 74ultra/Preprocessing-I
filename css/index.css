@@ -130,8 +130,150 @@ table {
 * {
   box-sizing: border-box;
 }
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 html,
 body {
   height: 100%;
-  background: red;
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2.5rem;
+}
+p,
+th,
+td,
+a {
+  font-size: 1.6rem;
+}
+/* variables */
+/* mixins */
+.nav-styling {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 2.5rem 0;
+}
+.nav-item-styling {
+  display: flex;
+  justify-content: space-between;
+  width: 25rem;
+}
+/* Nested CSS */
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  color: #2C2C2C;
+}
+.container .navigation {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 2.5rem 0;
+}
+.container .navigation .nav-items {
+  display: flex;
+  justify-content: space-between;
+  width: 25rem;
+}
+.container .navigation .nav-items a {
+  text-decoration: none;
+  color: #6C6C6C;
+}
+.container .top-content {
+  background: #BEBEBE;
+  padding: 4.5rem 2.5rem;
+  border-radius: 1.2rem;
+}
+.container .top-content .pic-title {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #2C2C2C;
+}
+.container .top-content .pic-title .top-image {
+  width: 40rem;
+  border-radius: 1.2rem;
+  margin-bottom: 2rem;
+}
+.container .top-content .pic-title h1 {
+  padding-bottom: 1.5rem;
+}
+.container .top-content .cta {
+  margin: 0;
+}
+.container .top-content .cta p {
+  padding: 2rem 0;
+}
+.container .top-content .cta button {
+  width: 15rem;
+  height: 5rem;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.7rem;
+  color: white;
+  background: #2C2C2C;
+}
+.container .middle-content {
+  display: flex;
+  margin: 2.5rem 0;
+  padding: 2.5rem 0;
+  line-height: 1.8rem;
+}
+.container .middle-content section {
+  width: 50%;
+}
+.container .middle-content h3 {
+  padding-bottom: 1.8rem;
+}
+.container .middle-content .summary {
+  padding-right: 3rem;
+}
+.container .middle-content .skill-items {
+  border: 0.5px solid #BEBEBE;
+  border-radius: 0.5rem;
+}
+.container .middle-content .skill-items p {
+  border: 0.5px solid #BEBEBE;
+  padding: 1.5rem 2rem;
+}
+.container .work-history h3 {
+  padding-bottom: 1.2rem;
+}
+.container .work-history table {
+  width: 100%;
+}
+.container .work-history table td,
+.container .work-history table th {
+  text-align: left;
+  padding: 1.5rem;
+  border-bottom: 0.5px solid #BEBEBE;
+}
+.container .work-history table th {
+  font-weight: bold;
+  border-top: 0.5px solid #BEBEBE;
+}
+.container .work-history table .row-one,
+.container .work-history table .row-three {
+  background: #E1E1E1;
+}
+.container footer {
+  text-align: center;
+  margin: 3rem 0 4rem;
+  padding: 3rem 0;
+  color: white;
+  background: #2C2C2C;
 }

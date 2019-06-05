@@ -53,8 +53,187 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-	height: 100%;
-	background: red;
+*:before, *:after {
+  box-sizing: inherit;
 }
 
+html, body {
+	height: 100%;
+	font-size: 62.5%;
+	font-family: 'Lato', sans-serif;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 3.2rem;
+}
+
+h3 {
+	font-size: 3rem;
+}
+
+h4 {
+	font-size: 2.5rem;
+}
+
+p, th, td, a {
+	font-size: 1.6rem;
+}
+
+/* variables */
+
+@gray-black: #2C2C2C;
+@gray: #6C6C6C;
+@gray-white: #BEBEBE;
+@b-radius1: 1.2rem;
+@b-styling: 0.5px solid @gray-white;
+@line-height: 1.8rem;
+
+/* mixins */
+
+.nav-styling {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+	margin: 2.5rem 0;
+}
+
+.nav-item-styling {
+	display: flex;
+	justify-content: space-between;
+	width: 25rem;
+}
+
+/* Nested CSS */
+
+.container {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	color: @gray-black;
+
+	.navigation {
+		.nav-styling();
+		
+		.nav-items {
+			.nav-item-styling();
+			
+			a {
+				text-decoration: none;
+				color: @gray;
+			}
+		}
+
+	}
+
+	.top-content {
+		background: @gray-white;
+		padding: 4.5rem 2.5rem;
+		border-radius: @b-radius1;
+
+		.pic-title {
+			display: inline-block;
+			width: 100%;
+			padding-bottom: 2rem;
+			border-bottom: 1px solid @gray-black;
+			
+			.top-image {
+				width: 40rem;
+				border-radius: @b-radius1;
+				margin-bottom: 2rem;
+			}
+			
+			h1 {
+				padding-bottom: 1.5rem;
+			}
+		}
+
+		.cta {
+			margin: 0;
+
+			p {
+				padding: 2rem 0;
+			}
+
+			button {
+				width: 15rem;
+				height: 5rem;
+				border: none;
+				border-radius: 0.7rem;
+				font-size: 1.7rem;
+				color: white;
+				background: @gray-black;
+			}
+		}
+		
+	}
+	
+	.middle-content {
+		display: flex;
+		margin: 2.5rem 0;
+		padding: 2.5rem 0;
+		line-height: @line-height;
+
+		section {
+			width: 50%;
+		}
+
+		h3 {
+			padding-bottom: 1.8rem;
+		}
+		
+		.summary {
+			padding-right: 3rem;
+		}
+
+		.skill-items {
+			border: @b-styling;
+			border-radius: 0.5rem;
+			
+			p {
+				border: @b-styling;
+				padding: 1.5rem 2rem;
+			}
+		}
+
+
+	}
+	
+	.work-history {
+
+		h3 {
+			padding-bottom: 1.2rem;
+		}
+
+		table {
+			width: 100%;
+
+			td, th {
+				text-align: left;
+				padding: 1.5rem;
+				border-bottom: @b-styling;
+			}
+
+			th {
+				font-weight: bold;
+				border-top: @b-styling;
+			}
+
+			.row-one, .row-three {
+				background: #E1E1E1;
+			}
+		}
+
+	}
+
+	footer {
+		text-align: center;
+		margin: 3rem 0 4rem;
+		padding: 3rem 0;
+		color: white;
+		background: @gray-black;
+	}
+}
