@@ -237,6 +237,7 @@ a {
 }
 .container .top-content .pic-title h1 {
   padding-bottom: 1.5rem;
+  font-weight: bold;
 }
 .container .top-content .cta {
   margin: 0;
