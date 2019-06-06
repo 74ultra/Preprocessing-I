@@ -1,1 +1,327 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2.5rem;
+}
+p,
+th,
+td,
+a {
+  font-size: 1.6rem;
+}
+/* variables */
+/* mixins */
+.nav-styling {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 2.5rem 0;
+}
+.nav-item-styling {
+  display: flex;
+  justify-content: space-between;
+  width: 25rem;
+}
+/* Nested CSS */
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  color: #2C2C2C;
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+.container .navigation {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 2.5rem 0;
+}
+@media (max-width: 500px) {
+  .container .navigation {
+    justify-content: center;
+  }
+}
+.container .navigation .nav-items {
+  display: flex;
+  justify-content: space-between;
+  width: 25rem;
+}
+.container .navigation .nav-items a {
+  text-decoration: none;
+  color: #6C6C6C;
+}
+.container .top-content {
+  background: #BEBEBE;
+  padding: 4.5rem 2.5rem;
+  border-radius: 1.2rem;
+}
+@media (max-width: 500px) {
+  .container .top-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: none;
+    padding: 2rem;
+  }
+}
+.container .top-content .pic-title {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #2C2C2C;
+}
+.container .top-content .pic-title .top-image {
+  width: 40rem;
+  border-radius: 1.2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 500px) {
+  .container .top-content .pic-title .top-image {
+    width: 25rem;
+    text-align: center;
+  }
+}
+.container .top-content .pic-title h1 {
+  padding-bottom: 1.5rem;
+  font-weight: bold;
+}
+.container .top-content .cta {
+  margin: 0;
+}
+.container .top-content .cta p {
+  padding: 2rem 0;
+}
+.container .top-content .cta button {
+  width: 15rem;
+  height: 5rem;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.7rem;
+  color: white;
+  background: #2C2C2C;
+}
+.container .middle-content {
+  display: flex;
+  margin: 0;
+  padding: 2.5rem 0;
+  line-height: 1.8rem;
+}
+@media (max-width: 500px) {
+  .container .middle-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container .middle-content section {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .container .middle-content section {
+    width: 80%;
+  }
+}
+.container .middle-content h3 {
+  padding-bottom: 1.8rem;
+}
+.container .middle-content .summary {
+  padding-right: 3rem;
+}
+@media (max-width: 500px) {
+  .container .middle-content .summary {
+    padding: 0 0 2rem 0;
+  }
+}
+.container .middle-content .skill-items {
+  border: 0.5px solid #BEBEBE;
+  border-radius: 0.5rem;
+}
+.container .middle-content .skill-items p {
+  border: 0.5px solid #BEBEBE;
+  padding: 1.5rem 2rem;
+}
+.container .work-history h3 {
+  padding-bottom: 1.2rem;
+}
+@media (max-width: 500px) {
+  .container .work-history h3 {
+    padding: 0 2rem;
+  }
+}
+.container .work-history table {
+  width: 100%;
+}
+.container .work-history table td,
+.container .work-history table th {
+  text-align: left;
+  padding: 1.5rem;
+  border-bottom: 0.5px solid #BEBEBE;
+}
+.container .work-history table th {
+  font-weight: bold;
+  border-top: 0.5px solid #BEBEBE;
+}
+.container .work-history table .row-one,
+.container .work-history table .row-three {
+  background: #E1E1E1;
+}
+.container footer {
+  text-align: center;
+  margin: 3rem 0 4rem;
+  padding: 3rem 0;
+  color: white;
+  background: #2C2C2C;
+}
